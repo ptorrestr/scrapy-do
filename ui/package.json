@@ -2,7 +2,7 @@
   "name": "ui",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "/scraper",
   "dependencies": {
     "bootstrap": "^4.4.1",
     "highlight.js": "^9.17.1",
