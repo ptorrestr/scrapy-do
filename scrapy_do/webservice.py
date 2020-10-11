@@ -383,7 +383,9 @@ def get_web_app(config, controller):
         portal = Portal(PublicHTMLRealm(config, controller),
                         [FilePasswordDB(auth_file)])
         credential_factory = DigestCredentialFactory('md5', b'scrapy-do')
-        resource = HTTPAuthSessionWrapper(portal, [credential_factory])
-        return resource
-
-    return WebApp(config, controller)
+        resource_l = HTTPAuthSessionWrapper(portal, [credential_factory])
+        return resource_l
+    app = WebApp(config, controller)
+    root = resource.Resource()
+    root.putChild(b"scraper", app)
+    return root

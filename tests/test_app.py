@@ -209,7 +209,8 @@ class AppNoAuthTest(AppTestBase):
     #---------------------------------------------------------------------------
     @inlineCallbacks
     def test_app(self):
-        response = yield web_retrieve_async('GET', 'http://127.0.0.1:7654')
+        response = yield web_retrieve_async('GET',
+                                            'http://127.0.0.1:7654/scraper')
         resp = response[0]
         self.assertEqual(resp.code, 200)
 

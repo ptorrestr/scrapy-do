@@ -1,0 +1,29 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+docutils = "*"
+pygments = "*"
+pytest-cov = "*"
+pytest-flake8 = "*"
+pytest = "*"
+sphinx = "*"
+pylint = "*"
+
+[packages]
+scrapy = "*"
+twisted = "*"
+pyopenssl = "*"
+psutil = "*"
+python-dateutil = "*"
+schedule = "*"
+pem = "*"
+tabulate = "*"
+requests = "*"
+autobahn = "*"
+tzlocal = "*"
+
+[requires]
+python_version = "3.6"
