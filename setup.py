@@ -102,7 +102,7 @@ class build_ui(build_py):
                     target_artefact = artefact[1:]
                 else:
                     source_artefact = artefact
-                    target_artefact = artefact
+                    target_artefact = "scraper/" + artefact
                 source_file = os.path.join(build_dir, source_artefact)
                 target_file = os.path.join(target_dir, target_artefact)
                 target_prefix = os.path.dirname(target_file)
