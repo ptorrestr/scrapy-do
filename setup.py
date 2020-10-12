@@ -68,7 +68,7 @@ class build_ui(build_py):
             #TODO: we change the comand in order to control the size of the heap.
             #ret = run_command([npm, 'run-script', 'build'], ui_path)
             node = find_executable('node')
-            ret = run_command([node, '--expose-gc','--max-old-space-size=400',
+            ret = run_command([node, '--expose-gc','--max-old-space-size=500',
                 'node_modules/react-scripts/scripts/build.js'], ui_path)
             if ret != 0:
                 print('[!] Build of JavaScript artefacts failed')
