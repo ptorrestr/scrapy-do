@@ -30,8 +30,8 @@ export class Backend {
     const wsProtocol = loc.protocol === 'https:' ? 'wss:' : 'ws:';
     this.wsUrl =
       process.env.NODE_ENV === 'production'
-        ? `${wsProtocol}//${loc.host}/ws`
-        : 'ws://localhost:7654/ws';
+        ? `${wsProtocol}//${loc.host}/scraper/ws`
+        : 'ws://localhost:7654/scraper/ws';
 
     this.ws = null;
     this.countdownTimer = null;
