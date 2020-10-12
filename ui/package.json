@@ -20,6 +20,9 @@
     "redux": "^4.0.5",
     "sort-by": "^1.2.0"
   },
+  "devDependencies": {
+    "@babel/core": "^7.7.7"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "CI=true GENERATE_SOURCEMAP=false react-scripts build",
