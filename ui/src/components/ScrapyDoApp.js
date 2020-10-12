@@ -24,11 +24,11 @@ class ScrapyDoApp extends Component {
         <div className='content'>
           <BackendStatus />
           <Switch>
-            <Route exact path='/' component={Dashboard} />
-            <Route exact path='/dashboard' component={Dashboard} />
-            <Route exact path='/project-list' component={ProjectList} />
-            <Route path='/job-list/:status' component={JobList} />
-            <Route exact path='/about' component={About} />
+            <Route exact path='/scraper/' component={Dashboard} />
+            <Route exact path='/scraper/dashboard' component={Dashboard} />
+            <Route exact path='/scraper/project-list' component={ProjectList} />
+            <Route path='/scraper/job-list/:status' component={JobList} />
+            <Route exact path='/scraper/about' component={About} />
             <Route component={WrongRoute} />
           </Switch>
         </div>

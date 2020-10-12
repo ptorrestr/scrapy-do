@@ -23,7 +23,7 @@ class ScrapyDoNav extends Component {
   render() {
     return (
       <Navbar bg='dark' variant='dark' collapseOnSelect expand='md'>
-        <LinkContainer to="/">
+        <LinkContainer to="/scraper/">
           <Navbar.Brand>
             Scrapy Do
           </Navbar.Brand>
@@ -32,16 +32,16 @@ class ScrapyDoNav extends Component {
         <Navbar.Collapse id="navbar">
           <Nav className="mr-auto" />
           <Nav>
-            <LinkContainer to="/dashboard">
+            <LinkContainer to="/scraper/dashboard">
               <Nav.Link><FaChartLine /> Dashboard</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/project-list">
+            <LinkContainer to="/scraper/project-list">
               <Nav.Link><FaBlender /> Projects</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/job-list/active">
+            <LinkContainer to="/scraper/job-list/active">
               <Nav.Link><FaBolt /> Active Jobs</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/job-list/completed">
+            <LinkContainer to="/scraper/job-list/completed">
               <Nav.Link><FaRegCheckSquare /> Completed Jobs</Nav.Link>
             </LinkContainer>
           </Nav>

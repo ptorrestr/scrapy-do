@@ -64,7 +64,7 @@ function Toggle({ text, eventKey, fn }) {
 //------------------------------------------------------------------------------
 const getLogURL = (jobID, isError) => {
   const logType = isError ? 'err' : 'out';
-  return `/get-log/data/${jobID}.${logType}`;
+  return `/scraper/get-log/data/${jobID}.${logType}`;
 };
 
 //------------------------------------------------------------------------------

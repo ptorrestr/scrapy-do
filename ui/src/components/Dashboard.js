@@ -58,7 +58,7 @@ class Dashboard extends Component {
             </div>
           </div>
           <div className='text-summary'>
-            [<Link to="/about">About</Link>]
+            [<Link to="/scraper/about">About</Link>]
           </div>
         </div>
       </div>
