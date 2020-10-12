@@ -63,19 +63,19 @@ class WebApp(resource.Resource):
         #-----------------------------------------------------------------------
         assets = None
         try:
-            assets = get_data(__package__, 'ui/asset-manifest.json')
+            assets = get_data(__package__, 'ui/scraper/asset-manifest.json')
             assets = assets.decode('utf-8')
         except FileNotFoundError:
             self.index = self
 
         if assets is not None:
-            self.index = UIResource('ui/index.html')
+            self.index = UIResource('ui/scraper/index.html')
             self.putChild(b'', self.index)
 
             children = [
-                '/favicon.png',
-                '/manifest.json',
-                '/scrapy-do-logo.png'
+                '/scraper/favicon.png',
+                '/scraper/manifest.json',
+                '/scraper/scrapy-do-logo.png'
             ]
             for child in children:
                 self.register_child(child, UIResource('ui' + child))
