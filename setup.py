@@ -98,9 +98,13 @@ class build_ui(build_py):
             print('Copying JavaScript artefacts to', target_dir)
             for artefact in artefacts:
                 if artefact.startswith('/scraper/'):
-                    artefact = artefact[9:]
-                source_file = os.path.join(build_dir, artefact)
-                target_file = os.path.join(target_dir, artefact)
+                    source_artefact = artefact[9:]
+                    target_artefact = artefact[1:]
+                else:
+                    source_artefact = artefact
+                    target_artefact = artefact
+                source_file = os.path.join(build_dir, source_artefact)
+                target_file = os.path.join(target_dir, target_artefact)
                 target_prefix = os.path.dirname(target_file)
                 if not os.path.exists(target_prefix):
                     os.makedirs(target_prefix)
