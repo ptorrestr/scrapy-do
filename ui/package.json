@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "CI=true GENERATE_SOURCEMAP=false react-scripts build",
+    "build": "CI=true GENERATE_SOURCEMAP=false  NODE_OPTIONS=--max_old_space_size=450 react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
